@@ -167,17 +167,6 @@ client.on('message', async message =>{ //RayGamerMC Mute Code
   
   }); //كود نزع الميوت
 
-client.on('message', message => { //RayGamerMC MemberCount Code
-    if (!message.channel.guild) return;
-if(message.content =='+count') //Snow Codes RayGamerMC
-var IzRo = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.setFooter(message.author.username, message.author.avatarURL)
-.setTitle('🌍| معلومات الأعضاء')
-.addBlankField(true) //Snow Codes
-.addField('عدد الأعضاء',`__${message.guild.memberCount}__`)
-message.channel.send(IzRo);
-}); //كود معرفة كم عدد الأعضاء ب سيرفرك
 
 client.on("message", async message => {
     if(message.content.startsWith(prefix + "help")) {
@@ -354,18 +343,6 @@ client.on("message", message => { //clear
        
 })
 
- client.on('message',msg => {
- const cd = require("countdown")
-      if(msg.content.toLowerCase() === `{prefix}ramadan`) {
-        let hi =message.channel.send(`Wait.`)
-          setInterval(async function () {
-            let thedate = new Date().getTime();
-            let ramadan = new Date("May 6, 2019 00:00:00").getTime();
-            var timespan = cd(thedate, ramadan);
-            hi.edit(`Remaining days until ramadan comes\n${timespan}`)
-          }, 1000);
-      }
- })
   
   let room = "id room"
 
